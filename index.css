@@ -4,13 +4,18 @@
 }
 
 @font-face {
-    font-family: 'Roboto-Light';
-    src: url('fonts/Roboto-Light.ttf');
+    font-family: 'BungeeOutline';
+    src: url('fonts/BungeeOutline-Regular.ttf');
 }
 
 @font-face {
-    font-family: 'Torney-Regular';
-    src: url('fonts/Tourney-Regular.ttf');
+    font-family: 'BarlowCondensed';
+    src: url('fonts/BarlowCondensed-Light.ttf');
+}
+
+@font-face {
+    font-family: 'BarlowSemiCondensed';
+    src: url('fonts/BarlowSemiCondensed-Regular.ttf');
 }
 
 body {
@@ -37,13 +42,13 @@ main {
     flex-direction: column;
     gap: 60px;
 
-    font-family: Roboto-Light;
+    font-family: BarlowCondensed;
 }
 
 header {
     font-family: BungeeShade;
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 62px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 74px;
 }
 
 /* Navigation */
@@ -63,12 +68,17 @@ nav a {
     padding: 15px;
     border-radius: 10px;
 
-    font-size: 18px;
+    font-size: 22px;
+    font-family: BarlowSemiCondensed;
+    font-weight: lighter;
     text-align: center;
     text-decoration: none;
+
 }
 
-nav a:hover {
+nav a:nth-child(1):hover,
+nav a:nth-child(3):hover,
+nav a:nth-child(4):hover {
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
 }
@@ -77,6 +87,7 @@ nav a:nth-child(2) {
     font-weight: bold;
     border: 1px solid white;
     box-shadow: 0px 0px 3px 3px rgba(255, 255, 255, 0.5);
+    pointer-events: none;
 }
 
 section {
@@ -84,25 +95,24 @@ section {
     border: 1px solid white;
     color: white;
 
-    border-radius: 15px;
-    padding: 15px;
-
-    display: flex;
+    border-radius: 18px;
+    padding: 0px 15px 0px 15px;
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: 2fr 1fr;
     flex-direction: column;
 }
 
 section article {
-    height: 700px;
+    margin: 0px;
     display: flex;
     flex-direction: row;
     gap: 6px;
-    margin-bottom: 0px;
 }
 
 section article div {
     padding: 15px;
     flex-grow: 2;
-
 }
 
 section article div:first-child {
@@ -110,26 +120,35 @@ section article div:first-child {
 }
 
 section footer {
-    height: 200px;
-    display: flex;
-    flex-direction: row;
+    margin: 0px;
+    display: grid;
     gap: 3px;
-    margin-top: 0px;
 }
 
 section footer p {
-    padding: 25px;
-    flex-grow: 1;
+    box-sizing: border-box;
+    padding: 25px 15px 25px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
 }
 
 /* SECTION - Are You Experienced  */
+section#experienced footer {
+    grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+}
 
 /* ARTICLE */
 
 /* FOOTER */
 section#experienced footer p {
     background-color: rgb(172, 82, 150);
-    color: yellow;
+    color: rgb(245, 210, 11);
+}
+
+section#experienced footer p:nth-child(1) {
+    border-radius: 18px 0px 18px 18px;
 }
 
 section#experienced footer p:nth-child(2) {
@@ -137,10 +156,28 @@ section#experienced footer p:nth-child(2) {
 }
 
 section#experienced footer p:nth-child(3) {
-    flex-grow: 2;
+    border-radius: 18px 18px 18px 0px;
 }
 
-/* SECTION - Bold As Love  */
+section#experienced footer p:nth-child(4) {
+    border-radius: 0px 18px 18px 18px;
+    color: white;
+    align-items: end;
+    padding: 15px 15px 15px 15px;
+
+    background-image: url(images/chas.jpg);
+    background-size: cover;
+    background-position: right 50% top 60%;
+}
+
+section#experienced footer p:nth-child(5) {
+    border-radius: 18px 18px 0px 18px;
+}
+
+/* SECTION - Bold As Love - Axis  */
+section#axis footer {
+    grid-template-columns: 2fr 1fr 2fr 1fr;
+}
 
 /* ARTICLE */
 
@@ -151,11 +188,26 @@ section#axis footer p {
 }
 
 section#axis footer p:nth-child(1) {
-    flex-grow: 2;
+    border-radius: 18px 18px 18px 0px;
+}
+
+section#axis footer p:nth-child(2) {
+    border-radius: 0px 18px 18px 18px;
 }
 
 section#axis footer p:nth-child(3) {
-    flex-grow: 2;
+    border-radius: 0px 18px 18px 18px;
+    color: white;
+    align-items: end;
+    padding: 15px 15px 15px 15px;
+
+    background-image: url(images/hendrix-eddie.jpg);
+    background-size: cover;
+    background-position: right 50% top 55%;
+}
+
+section#axis footer p:nth-child(4) {
+    border-radius: 18px 18px 0px 18px;
 }
 
 
