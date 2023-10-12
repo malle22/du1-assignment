@@ -25,7 +25,7 @@ body {
     width: 100vw;
 
     background: url(images/background-hendrix.jpg);
-    background-size: fill;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -34,31 +34,26 @@ body {
 }
 
 main {
-    margin: 10vw;
-
-    padding: 18px;
+    margin: 6vw;
+    padding: 3vw;
     border-radius: 20px;
     background-color: rgba(0, 0, 0, 0.3);
 
     display: flex;
     flex-direction: column;
-    gap: 60px;
+    gap: 5vw;
 
     font-family: BarlowCondensed;
-    font-size: 16px;
 }
 
 header {
     font-family: BungeeShade;
     color: rgba(255, 255, 255, 0.8);
-    font-size: 74px;
 }
 
-/* Navigation */
-
 nav {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 1.4vw;
+    margin-bottom: 1.6vw;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 5px;
@@ -71,12 +66,12 @@ nav a {
     padding: 15px;
     border-radius: 10px;
 
-    font-size: 22px;
     font-family: BarlowSemiCondensed;
     font-weight: lighter;
     text-align: center;
     text-decoration: none;
 
+    height: 2.8vw;
 }
 
 nav a:nth-child(1):hover,
@@ -94,12 +89,13 @@ nav a:nth-child(2) {
 }
 
 section {
+    margin: 0;
     background-color: rgba(0, 0, 0, 0.3);
     color: white;
 
     border: 1px solid white;
     border-radius: 20px;
-    padding: 15px;
+    padding: 2vw;
 
     display: flex;
     flex-direction: column;
@@ -121,13 +117,11 @@ section article>div:nth-child(1) {
 section article>div:nth-child(1) h1 {
     margin: 0;
     font-family: BungeeOutline;
-    font-size: 28px;
 }
 
 section article>div:nth-child(1) h2 {
     margin-top: 0;
-    margin-bottom: 50px;
-    font-size: 26px;
+    margin-bottom: 20px;
 }
 
 section article div p {
@@ -136,21 +130,18 @@ section article div p {
 
 section article div ul {
     margin-top: 0;
-    margin-bottom: 50px;
-
+    margin-bottom: 25px;
     list-style-type: none;
 }
 
 section article>div:nth-child(2) {
-    /* whole right side*/
     margin: 0;
-    display: inline-block;
 }
 
 section article>div:nth-child(2)>div:nth-child(1) {
     margin-bottom: 8px;
-    height: 390px;
-    width: 390px;
+    height: 30vw;
+    width: 30vw;
     display: grid;
     grid-template-columns: 1;
     grid-template-rows: 1;
@@ -196,8 +187,9 @@ section article>div:nth-child(2)>div:nth-child(2) {
 }
 
 section article>div:nth-child(2)>div:nth-child(2) div {
-    padding: 14px;
+    padding: 1.2vw;
     margin: 0;
+    height: 11vw;
 }
 
 section article>div:nth-child(2)>div:nth-child(2)>div:nth-child(1) {
@@ -208,7 +200,7 @@ section article>div:nth-child(2)>div:nth-child(2)>div:nth-child(2) {
     border-radius: 0 0 20px 0;
 }
 
-section article>div:nth-child(2)>div:nth-child(2)>div>p {
+section article>div:nth-child(2)>div:nth-child(2)>div p {
     margin: 0;
     padding: 0;
 }
@@ -217,7 +209,6 @@ section article>div:nth-child(2)>div:nth-child(2) div ol {
     margin: 0;
     padding-left: 13px;
     height: 90px;
-    font-size: 12px;
 }
 
 section article>div:nth-child(2)>div:nth-child(2)>div>p {
@@ -236,15 +227,18 @@ section footer p {
     margin: 0;
 
     box-sizing: border-box;
-    padding: 25px 15px 25px 15px;
+    padding-left: 1.2vw;
+    padding-right: 1.2vw;
 
     display: flex;
     align-items: center;
     justify-content: center;
+
+    height: 18vw;
 }
 
 main>footer {
-    margin-top: 20px;
+    margin-top: 2vw;
     color: white;
 }
 
@@ -347,4 +341,216 @@ section#axis footer p:nth-child(3) {
 
 section#axis footer p:nth-child(4) {
     border-radius: 20px 20px 0px 20px;
+}
+
+
+/*  DESKTOP VERSION font-sizes */
+@media (min-width:500px) {
+    header {
+        font-size: 6vw;
+    }
+
+    nav a {
+        font-size: 2.2vw;
+    }
+
+    div>h1 {
+        font-size: 2.5vw;
+    }
+
+    div>h2 {
+        font-size: 2.5vw;
+    }
+
+    article div:nth-child(1) p {
+        font-size: 1.5vw;
+    }
+
+    ul li {
+        font-size: 1.5vw;
+    }
+
+    article>div:nth-child(2)>div:nth-child(2) p {
+        font-size: 1.4vw;
+    }
+
+    ol li {
+        font-size: 1.1vw;
+    }
+
+    footer p {
+        font-size: 1.2vw;
+    }
+
+    main>footer {
+        font-size: 1.3vw;
+    }
+}
+
+@media (min-width:801px) and (max-width:900px) {
+    header {
+        font-size: 48px;
+    }
+
+    nav a {
+        font-size: 18px;
+    }
+
+    div>h1 {
+        font-size: 20px;
+    }
+
+    div>h2 {
+        font-size: 20px;
+    }
+
+    article div:nth-child(1) p {
+        font-size: 12px;
+    }
+
+    ul li {
+        font-size: 12px;
+    }
+
+    article>div:nth-child(2)>div:nth-child(2) p {
+        font-size: 11px;
+    }
+
+    ol li {
+        font-size: 9px;
+    }
+
+    footer p {
+        font-size: 10px;
+    }
+}
+
+
+/*  MOBILE VERSION - fonts shrink with width  */
+
+@media (max-width:500px) {
+    body {
+        margin: 0;
+        padding: 0;
+        background: url(images/hendrix-mobile-background.jpg);
+
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+
+        overflow: scroll;
+
+        /* smallest cellphone screen-size according to google is 
+        the Iphone 5 that comes with a width of 320px  */
+        min-width: 320px;
+    }
+
+    main {
+        margin: 0;
+        padding: 0;
+
+        background-color: rgba(0, 0, 0, 0);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        gap: 5vw;
+    }
+
+    section {
+        padding: 3vw;
+    }
+
+    header {
+        padding: 0;
+        text-align: center;
+        font-size: 16vw;
+    }
+
+    h1 {
+        font-size: 8vw;
+    }
+
+    h2 {
+        font-size: 8vw;
+    }
+
+    article div:nth-child(1) p {
+        font-size: 4vw;
+    }
+
+    ul li {
+        font-size: 4vw;
+    }
+
+    nav {
+        width: 92vw;
+    }
+
+    nav a {
+        font-size: 2.8vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    article {
+        flex-direction: column-reverse;
+        font-size: 2.6vw;
+    }
+
+    section {
+        width: 85vw;
+    }
+
+    section article>div:nth-child(2) {
+        align-items: center;
+        justify-content: center;
+    }
+
+    section article>div:nth-child(2)>div:nth-child(1) {
+        height: 85vw;
+        width: 85vw;
+    }
+
+    section article>div:nth-child(2)>div:nth-child(2) div {
+        padding: 3vw;
+        height: 25vw;
+    }
+
+    article>div:nth-child(2)>div:nth-child(2) p {
+        font-size: 3vw;
+    }
+
+    section#experienced footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-row: 1fr 1fr;
+    }
+
+    section#experienced footer>p:nth-child(3) {
+        grid-column: 2 / span 2;
+        grid-row: 1;
+    }
+
+    section#axis footer {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    section>footer>p {
+        height: 30vw;
+        font-size: 2.5vw;
+        padding-left: 3vw;
+        padding-right: 3vw;
+    }
+
+    main>footer {
+        margin: 4vw 0 3vw 4vw;
+        font-size: 3vw;
+        align-self: flex-start;
+    }
 }
