@@ -441,9 +441,7 @@ section#axis footer p:nth-child(4) {
 
         overflow: scroll;
 
-        /* smallest cellphone screen-size according to google is 
-        the Iphone 5 that comes with a width of 320px  */
-        min-width: 320px;
+        min-width: 210px;
     }
 
     main {
