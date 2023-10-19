@@ -425,6 +425,48 @@ section#axis footer p:nth-child(4) {
     }
 }
 
+@media (min-width:1200px) {
+    header {
+        font-size: 72px;
+    }
+
+    nav a {
+        font-size: 27px;
+    }
+
+    div>h1 {
+        font-size: 30px;
+    }
+
+    div>h2 {
+        font-size: 30px;
+    }
+
+    article div:nth-child(1) p {
+        font-size: 18px;
+    }
+
+    ul li {
+        font-size: 18px;
+    }
+
+    article>div:nth-child(2)>div:nth-child(2) p {
+        font-size: 16.5px;
+    }
+
+    ol li {
+        font-size: 14px;
+    }
+
+    footer p {
+        font-size: 14.5px;
+    }
+
+    main>footer {
+        font-size: 16px;
+    }
+}
+
 
 /*  MOBILE VERSION - fonts shrink with width  */
 
